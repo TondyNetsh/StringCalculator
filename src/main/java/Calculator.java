@@ -6,14 +6,14 @@ public class Calculator {
     public static void main(String args[]) throws Exception {
         Calculator stringCalculator = new Calculator();
 
-        System.out.println("Add result: " + stringCalculator.add("1\n;2;3"));
-        System.out.println("Add result: " + stringCalculator.add("//;\\n1;2"));
-        System.out.println("Add result: " + stringCalculator.add("//;\\n1000,1;2"));
-        System.out.println("Add result: " + stringCalculator.add("//***\n1***2***3"));
-        System.out.println("Add result: " + stringCalculator.add("//[***][%%%]\n1***2%%%3"));
+        System.out.println("Add result: " + Calculator.add("1\n;2;3"));
+        System.out.println("Add result: " + Calculator.add("//;\\n1;2"));
+        System.out.println("Add result: " + Calculator.add("//;\\n1000,1;2"));
+        System.out.println("Add result: " + Calculator.add("//***\n1***2***3"));
+        System.out.println("Add result: " + Calculator.add("//[***][%%%]\n1***2%%%3"));
     }
 
-    public int add(String s) throws Exception {
+    public static int add(String s) throws Exception {
 
         int sum = 0;
         if (null != s && s.equals("")) {
@@ -27,7 +27,7 @@ public class Calculator {
         }
         return sum;
     }
-    public List<Integer> splitStringInputValue(String inputValue) throws Exception {
+    public static List<Integer> splitStringInputValue(String inputValue) throws Exception {
         String stringArray[] = inputValue.split("[//\n,!.?:;@#$%^&*()_+=?'<>+]");
         List<Integer> list = new ArrayList<Integer>();
 
